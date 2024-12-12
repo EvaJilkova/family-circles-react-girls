@@ -1,0 +1,51 @@
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: aliceblue;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  min-height: 70px;
+
+  /* Logo */
+  .logo {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  /* Navigation Menu */
+  .navMenu {
+    display: flex;
+    justify-content: space-between;
+
+    li {
+      margin: 0 10px;
+
+      a {
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+  }
+}
