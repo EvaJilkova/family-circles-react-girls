@@ -79,6 +79,7 @@ module.exports = async options =>
               changeOrigin: false, //pass the Host header to the backend unchanged  https://github.com/Browsersync/browser-sync/issues/430
             },
           },
+          open: false,
           socket: {
             clients: {
               heartbeatTimeout: 60000,
