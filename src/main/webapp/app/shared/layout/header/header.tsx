@@ -10,6 +10,7 @@ import { setLocale } from 'app/shared/reducers/locale';
 import { AccountMenu, AdminMenu, EntitiesMenu, LocaleMenu } from '../menus';
 import { Brand, Home } from './header-components';
 import { ItineraryMenu } from 'app/shared/layout/menus/itinerary';
+import { SharingMenu } from 'app/shared/layout/menus/sharing';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -61,6 +62,7 @@ const Header = (props: IHeaderProps) => {
             <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange} />
             <AccountMenu isAuthenticated={props.isAuthenticated} />
             <ItineraryMenu></ItineraryMenu>
+            <SharingMenu></SharingMenu>
           </Nav>
         </Collapse>
       </Navbar>

@@ -15,6 +15,7 @@ import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
 import Itinerary from 'app/modules/itinerary/itinerary';
+import Sharing from 'app/modules/sharing/sharing';
 
 const loading = <div>loading ...</div>;
 
@@ -51,6 +52,7 @@ const AppRoutes = () => {
           </Route>
         </Route>
         <Route path="itinerary" element={<Itinerary />}></Route>
+        <Route path="sharing" element={<Sharing />} />
         <Route
           path="admin/*"
           element={
