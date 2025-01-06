@@ -1,7 +1,7 @@
 {
   "home": {
     "title": "Welcome, Family Circles User!",
-    "subtitle": "This is your homepage",
+    "subtitle": "Family Cirsles is ...",
     "logged": {
       "message": "You are logged in as user \"{{username}}\"."
     },
