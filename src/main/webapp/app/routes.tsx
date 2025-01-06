@@ -14,6 +14,7 @@ import PrivateRoute from 'app/shared/auth/private-route';
 import ErrorBoundaryRoutes from 'app/shared/error/error-boundary-routes';
 import PageNotFound from 'app/shared/error/page-not-found';
 import { AUTHORITIES } from 'app/config/constants';
+import Itinerary from 'app/modules/itinerary/itinerary';
 
 const loading = <div>loading ...</div>;
 
@@ -49,6 +50,7 @@ const AppRoutes = () => {
             <Route path="finish" element={<PasswordResetFinish />} />
           </Route>
         </Route>
+        <Route path="itinerary" element={<Itinerary />}></Route>
         <Route
           path="admin/*"
           element={

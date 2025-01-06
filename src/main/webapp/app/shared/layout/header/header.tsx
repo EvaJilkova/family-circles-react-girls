@@ -9,6 +9,7 @@ import { useAppDispatch } from 'app/config/store';
 import { setLocale } from 'app/shared/reducers/locale';
 import { AccountMenu, AdminMenu, EntitiesMenu, LocaleMenu } from '../menus';
 import { Brand, Home } from './header-components';
+import { ItineraryMenu } from 'app/shared/layout/menus/itinerary';
 
 export interface IHeaderProps {
   isAuthenticated: boolean;
@@ -59,6 +60,7 @@ const Header = (props: IHeaderProps) => {
             )}
             <LocaleMenu currentLocale={props.currentLocale} onClick={handleLocaleChange} />
             <AccountMenu isAuthenticated={props.isAuthenticated} />
+            <ItineraryMenu></ItineraryMenu>
           </Nav>
         </Collapse>
       </Navbar>
