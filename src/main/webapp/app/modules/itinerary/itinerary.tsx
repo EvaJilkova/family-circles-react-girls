@@ -12,21 +12,10 @@ const items: DataItem[] = [
 
 export const Itinerary: React.FC = () => {
   const [data, setData] = useState<DataItem[]>([]); // State to hold data
-  const [loading, setLoading] = useState<boolean>(true); // State for loading status
-  const [error, setError] = useState<string | null>(null); // State for error handling
 
   useEffect(() => {
     setData(items);
   });
-
-  // Render different states (loading, error, or data)
-  if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
-  }
 
   return (
     <ul>
