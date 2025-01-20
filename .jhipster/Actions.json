@@ -1,0 +1,42 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "customerId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "actionId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "locationId",
+      "fieldType": "UUID"
+    }
+  ],
+  "name": "Actions",
+  "relationships": [
+    {
+      "otherEntityName": "action",
+      "otherEntityRelationshipName": "actionId",
+      "relationshipName": "actionId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "customerId",
+      "relationshipName": "customerId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "location",
+      "otherEntityRelationshipName": "locationId",
+      "relationshipName": "locationId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}

@@ -19,7 +19,7 @@
     "entities": [],
     "feignClient": null,
     "gradleEnterpriseHost": null,
-    "jhipsterVersion": "8.7.3",
+    "jhipsterVersion": "8.8.0",
     "jwtSecretKey": "NTRkNjcxMzhjNzMxMWY3NmFjZDUyMDE4MmY0YjgyMjE5NDExMGQ3ZjkzMzc1Njg0MTJlMTNkZDRkMDA2MmMzOWI4ZGM2YzAxNWYxY2Y3MTAwZDM3OWI3OWViZWFhMDgzMTMzMDE2NzZjOTQ3NTdhZjUyZGYxMjg2YTI0YzY0ZGU=",
     "languages": ["en"],
     "messageBroker": false,

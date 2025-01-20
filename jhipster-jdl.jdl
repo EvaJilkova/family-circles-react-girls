@@ -1,0 +1,107 @@
+entity Item {
+  itemId UUID
+  itemName String required
+  categoryId UUID
+}
+
+entity Category {
+  categoryId UUID
+  categoryName String required
+}
+
+entity Region {
+  regionName String
+  regionCode String unique required
+}
+
+entity Country {
+  countryCode String unique required
+  countryName String
+  regionCode String
+}
+
+entity Location {
+  locationId UUID
+  street String
+  streetNumber String
+  postalCode String
+  city String
+  countryCode String
+}
+
+enum ActionType {
+  SHARING,
+  SWAP,
+  SALE,
+  RATE_USER_INTERACTION,
+  REVIEW
+}
+
+entity Action {
+  actionId UUID
+  actionName String
+  actionType ActionType
+  description String
+}
+
+entity Customer {
+  customerId UUID
+  userName String unique required
+  firstName String
+  lastName String
+  language Language
+  email String
+  phoneNumber String
+}
+
+entity Actions {
+  customerId UUID
+  actionId UUID
+  locationId UUID
+}
+entity Inventory {
+  userId UUID
+  itemId UUID
+}
+
+enum Language {
+  ENGLISH,
+  CZECH
+}
+
+/**
+* enum Visibility {
+*    PRIVATE, PUBLIC
+* }
+*/
+
+relationship OneToOne {
+  Country{regionCode} to Region{regionCode}
+  Country{countryCode} to Location{countryCode}
+}
+
+relationship OneToMany {
+  Item{categoryId} to Category{categoryId}
+}
+
+relationship ManyToOne {
+  Actions{actionId} to Action{actionId}
+  Actions{customerId} to Customer{customerId}
+  Actions{locationId} to Location{locationId}
+  Inventory{customerId} to Customer{customerId}
+  Inventory{itemId} to Item{itemId}
+  /*Users{userId} to User{userId}*/
+}
+
+// Set pagination options
+//paginate Action, User with infinite-scroll
+//paginate Item with pagination
+
+// Use Data Transfer Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+//service all with serviceImpl except Employee, Job
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

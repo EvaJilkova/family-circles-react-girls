@@ -1,0 +1,33 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "actionId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "actionName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "actionType",
+      "fieldType": "ActionType",
+      "fieldValues": "SHARING,SWAP,SALE,RATE_USER_INTERACTION,REVIEW"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "name": "Action",
+  "relationships": [
+    {
+      "otherEntityName": "actions",
+      "otherEntityRelationshipName": "actionId",
+      "relationshipName": "actionId",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

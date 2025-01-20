@@ -1,0 +1,36 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "itemId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "itemName",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "categoryId",
+      "fieldType": "UUID"
+    }
+  ],
+  "name": "Item",
+  "relationships": [
+    {
+      "otherEntityName": "category",
+      "otherEntityRelationshipName": "categoryId",
+      "relationshipName": "categoryId",
+      "relationshipSide": "left",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "inventory",
+      "otherEntityRelationshipName": "itemId",
+      "relationshipName": "itemId",
+      "relationshipSide": "right",
+      "relationshipType": "one-to-many"
+    }
+  ]
+}

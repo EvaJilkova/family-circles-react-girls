@@ -1,0 +1,31 @@
+{
+  "annotations": {},
+  "applications": "*",
+  "fields": [
+    {
+      "fieldName": "userId",
+      "fieldType": "UUID"
+    },
+    {
+      "fieldName": "itemId",
+      "fieldType": "UUID"
+    }
+  ],
+  "name": "Inventory",
+  "relationships": [
+    {
+      "otherEntityName": "customer",
+      "otherEntityRelationshipName": "customerId",
+      "relationshipName": "customerId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "item",
+      "otherEntityRelationshipName": "itemId",
+      "relationshipName": "itemId",
+      "relationshipSide": "left",
+      "relationshipType": "many-to-one"
+    }
+  ]
+}
