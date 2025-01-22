@@ -1,0 +1,1 @@
+./gradlew -x webapp
